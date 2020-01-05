@@ -22,10 +22,10 @@ require('./config/passport')(passport);
 app.use(express.static(path.join(__dirname, 'public')));
 
 //setting up database
-const mongoUrl = 'mongodb://localhost:27017/MENV';
+const mongo = require('./config/keys').mongoUrl;
 
-mongoose.connect(mongoUrl, { useNewUrlParser: true })
-    .then(() => console.log(`MongoDB connected ${mongoUrl}`))
+mongoose.connect(mongo, { useNewUrlParser: true })
+    .then(() => console.log(`MongoDB connected ${mongo}`))
     .catch(err => console.log(`unable to connect to db ${err}`))
 
 //bring in Users route
