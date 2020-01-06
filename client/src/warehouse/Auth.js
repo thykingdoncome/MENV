@@ -65,7 +65,7 @@
     // user welcome page
     async welcomeProfile({ commit }) {
         commit('welcome_req')
-        let res = await axios.get('http://localhost:3000/users/welcome');
+        let res = await axios.get('/users/welcome');
         commit('welcome_user', res.data.user)
         return res;
     }
