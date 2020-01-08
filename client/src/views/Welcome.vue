@@ -4,14 +4,20 @@
       <div v-if="user">
         <h1>Hello user with details:</h1>
 
-        <ul>
-          <li><h2>Name: {{ user.name }} </h2></li>
-          <li><h2>Email: {{ user.email }} </h2></li>
-        </ul>
+        <div>
+          <ul>
+            <li>
+              <h2>Name: {{ user.name }}</h2>
+            </li>
+            <li>
+              <h2>Email: {{ user.email }}</h2>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div>
-        <h3>WELCOME TO JOAZE</h3>
+        <h3>WELCOME TO J O A Z E</h3>
       </div>
       <div class="para">
         <p>
@@ -25,7 +31,7 @@
       </div>
 
       <div class="accBtn">
-        <button @click.prevent="logoutMeth">Logout</button>
+        <button id="btn" @click.prevent="logoutMeth">Logout</button>
       </div>
     </div>
   </section>
@@ -46,7 +52,7 @@ export default {
   },
 
   created() {
-    this.welcomeProfile(); 
+    this.welcomeProfile();
   }
 };
 </script>
@@ -59,8 +65,9 @@ export default {
   height: 100vh;
 }
 
-li{
-    list-style: none;
+li {
+  list-style: none;
+  margin: 0.5em 0 0 0;
 }
 
 .success {
@@ -84,16 +91,5 @@ li{
 
 .para {
   margin-bottom: 2em;
-}
-
-.accBtn {
-  width: 100%;
-}
-
-.accBtn button {
-  width: 100%;
-  padding: 1.2em 0;
-  box-shadow: 1px 1px 2px black;
-  border: none;
 }
 </style>

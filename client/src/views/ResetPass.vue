@@ -3,7 +3,9 @@
     <div class="form">
       <form>
         <h1>
-          <a href="index.html">J O A Z E</a>
+           <router-link to="/">
+         J O A Z E
+         </router-link> 
         </h1>
 
         <div class="inputs">
